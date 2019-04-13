@@ -1,0 +1,16 @@
+<template>
+  <div class="homebox">
+      购物车
+  </div>
+</template>
+
+<script>
+
+
+
+
+</script>
+
+<style scoped>
+
+</style>
