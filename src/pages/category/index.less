@@ -1,0 +1,90 @@
+.categorybox {
+    .fixbox{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .mainbox {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        top: 100rpx;
+        bottom: 0;
+        .bigleftcontent{
+            width: 200rpx;
+            height: 100%;
+            overflow: auto;
+            .leftcontent {
+                width: 200rpx;
+                font-size: 14px;
+                .list{
+                    height: 100rpx;
+                    line-height: 100rpx;
+                    text-align: center;
+                }
+                .active {
+                    position: relative;
+                    color: #eb4450;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        height: 60rpx;
+                        width: 15rpx;
+                        background-color: #eb4450;
+                        
+                    }
+                }
+    
+            }
+        }
+       
+        .bigrightbox{
+            flex: 1;
+            height: 100%;
+            overflow: auto;
+            .rightcontent {
+                padding: 16rpx 20rpx;
+                .toptitle {
+                    text-align: center;
+                    img {
+                        width: 518rpx;
+                        height: 180rpx;
+                    }
+                }
+    
+                .buttonmbox {
+                    .toptitlea {
+                        height: 100rpx;
+                        line-height: 100rpx;
+                        text-align: center;
+    
+                    }
+                    .bottombox{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        .itemlist{
+                            margin-top: 20rpx;
+                            width: 33.33%;
+                            text-align: center;
+                            img{
+                                height: 70rpx;
+                                width: 100rpx;
+                            }
+                            span{
+                                display: block;
+                                font-size: 12px;
+                                line-height: 60rpx;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}

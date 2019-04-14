@@ -1,0 +1,21 @@
+.searchbox {
+  background-color: #eeeeee;
+  padding: 20rpx;
+  position: relative;
+}
+.searchbox .search {
+  background-color: #fff;
+  height: 60rpx;
+  border-radius: 5rpx;
+  padding-left: 70rpx;
+}
+.searchbox .searchWord {
+  margin-top: 5rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.searchbox .searchWord icon {
+  font-size: 14px;
+}

@@ -1,13 +1,6 @@
 <template>
   <div class="category">
-    <!--头部搜索栏 -->
-    <div class="searchbox">
-      <input type="text" class="search">
-      <div class="searchWord">
-        <icon type="search" size="20" color="#c9c9c9"/>
-        <div class="word">搜索</div>
-      </div>
-    </div>
+  <search></search>
     <!-- 轮播图区域 -->
     <swiper
       indicator-dots
@@ -17,46 +10,39 @@
       class="swiperbox"
       circular
     >
-      <block v-for="(item,index) in [1,2,3]" :key="index">
+      <block v-for="(item,index) in swiperList" :key="index">
         <swiper-item class="swiperlistbox">
           <image
             mode="aspectFill"
-            src="https://img.alicdn.com/tfs/TB1kJH1QpYqK1RjSZLeXXbXppXa-520-280.jpg_q90_.webp"
+            :src="item.image_src"
             class="slideimage"
           />
         </swiper-item>
       </block>
     </swiper>
     <!-- 分类层 -->
-    <div class="category"></div>
-    <!-- 第一个楼层区域 -->
-    <div class="foolAre">
+    <div class="categorylista">
+      <img v-for="(item,index) in categoryList" :src="item.image_src" :key="index">
+    </div>
+    <!-- 楼层区域 -->
+    <div class="foolAre" v-for="(item,index) in foolterList" :key="index">
       <div class="title">
-        <img src="https://aecpm.alicdn.com/tfscom/TB1XhhKIhTpK1RjSZR0XXbEwXXa.jpg" alt>
+        <img :src="item.floor_title.image_src" alt>
       </div>
       <div class="floormain">
         <div class="left">
           <img
-            src="https://img.alicdn.com/tfs/TB1c5zxP4TpK1RjSZFMXXbG_VXa-468-644.png_400x400q100.jpg_.webp"
+            :src="item.product_list[0].image_src"
             alt
           >
         </div>
         <div class="right">
           <img
-            src="https://img.alicdn.com/bao/uploaded/i2/1656056986/TB2BSdGaNeK.eBjSZFuXXcT4FXa_!!1656056986.jpg_200x200q90.jpg_.webp"
+             v-if="!(listindex==0)"
+            :src="listitem.image_src"
             alt
-          >
-          <img
-            src="https://img.alicdn.com/bao/uploaded/i2/1656056986/TB2BSdGaNeK.eBjSZFuXXcT4FXa_!!1656056986.jpg_200x200q90.jpg_.webp"
-            alt
-          >
-          <img
-            src="https://img.alicdn.com/bao/uploaded/i2/1656056986/TB2BSdGaNeK.eBjSZFuXXcT4FXa_!!1656056986.jpg_200x200q90.jpg_.webp"
-            alt
-          >
-          <img
-            src="https://img.alicdn.com/bao/uploaded/i2/1656056986/TB2BSdGaNeK.eBjSZFuXXcT4FXa_!!1656056986.jpg_200x200q90.jpg_.webp"
-            alt
+            v-for="(listitem,listindex) in item.product_list"
+            :key="listindex"
           >
         </div>
       </div>
@@ -65,36 +51,54 @@
 </template>
 
 <script>
+// 导入封装的头部搜索组件
+import search from "../../components/search";
+
+// 导入请求函数
+import myrequert from "../../utils/myrequest.js";
+
+export default {
+  data() {
+    return {
+      swiperList:[],
+      categoryList:[],
+      foolterList:[],
+    };
+  },
+
+  // 注册组件
+  components:{
+    search
+  },
+
+  
+  async mounted() {
+  //  获取轮播图的数据
+    let res = await myrequert(
+      "https://itjustfun.cn/api/public/v1/home/swiperdata"
+    );
+    this.swiperList = res.data.data;
+   
+  //  获取分类的数据
+     let resa = await myrequert(
+      "https://itjustfun.cn/api/public/v1/home/catitems"
+    );
+    this.categoryList = resa.data.data;
+    console.log(this.categoryList);
+
+    // 获取楼层区域的数据
+    let foolterdata = await myrequert(
+      "https://itjustfun.cn/api/public/v1/home/floordata"
+    );
+    console.log(foolterdata);
+    this.foolterList = await foolterdata.data.data;
+  }
+};
 </script>
 
 <style scoped lang="less">
 .category {
-  background-color: #eb4450;
-  .searchbox {
-    padding: 20px;
-    position: relative;
-    .search {
-      background-color: #fff;
-      height: 60rpx;
-      border-radius: 5rpx;
-    }
-    .searchWord {
-      margin-top: 5rpx;
-      display: flex;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      icon {
-        font-size: 14px;
-      }
-      .word {
-        font-size: 14px;
-        color: #c9c9c9;
-        margin-left: 20rpx;
-      }
-    }
-  }
+ 
   // 轮播图
   .swiperbox {
     height: 340rpx;
@@ -106,8 +110,18 @@
       }
     }
   }
-  .category {
+  .categorylista {
+    display:flex;
     height: 190rpx;
+    justify-content:space-around;
+    margin-top:24rpx;
+    
+    img{
+      height:128rpx;
+      width:128rpx;
+
+
+    }
   }
   .foolAre {
     .title {

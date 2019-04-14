@@ -1,11 +1,16 @@
-function myrequert(){
+function myrequert(url,method="GET",data={},header={}){
     return new Promise((resovle,reject)=>{
         wx.request({
-            url:"",
-            header:"",
-            data:{},
-            success:resovle,
-            fail:reject,
+            url:url,
+            method:method,
+            data:data,
+            header:header,
+            success:function(res){
+                resovle(res);
+            },
+            fail:function(res){
+                reject(res);
+            },
         })
     })
 }

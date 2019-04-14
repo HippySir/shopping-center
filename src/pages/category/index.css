@@ -1,0 +1,80 @@
+.categorybox .fixbox {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.categorybox .mainbox {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 100rpx;
+  bottom: 0;
+}
+.categorybox .mainbox .bigleftcontent {
+  width: 200rpx;
+  height: 100%;
+  overflow: auto;
+}
+.categorybox .mainbox .bigleftcontent .leftcontent {
+  width: 200rpx;
+  font-size: 14px;
+}
+.categorybox .mainbox .bigleftcontent .leftcontent .list {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.categorybox .mainbox .bigleftcontent .leftcontent .active {
+  position: relative;
+  color: #eb4450;
+}
+.categorybox .mainbox .bigleftcontent .leftcontent .active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60rpx;
+  width: 15rpx;
+  background-color: #eb4450;
+}
+.categorybox .mainbox .bigrightbox {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+}
+.categorybox .mainbox .bigrightbox .rightcontent {
+  padding: 16rpx 20rpx;
+}
+.categorybox .mainbox .bigrightbox .rightcontent .toptitle {
+  text-align: center;
+}
+.categorybox .mainbox .bigrightbox .rightcontent .toptitle img {
+  width: 518rpx;
+  height: 180rpx;
+}
+.categorybox .mainbox .bigrightbox .rightcontent .buttonmbox .toptitlea {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.categorybox .mainbox .bigrightbox .rightcontent .buttonmbox .bottombox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.categorybox .mainbox .bigrightbox .rightcontent .buttonmbox .bottombox .itemlist {
+  margin-top: 20rpx;
+  width: 33.33%;
+  text-align: center;
+}
+.categorybox .mainbox .bigrightbox .rightcontent .buttonmbox .bottombox .itemlist img {
+  height: 70rpx;
+  width: 100rpx;
+}
+.categorybox .mainbox .bigrightbox .rightcontent .buttonmbox .bottombox .itemlist span {
+  display: block;
+  font-size: 12px;
+  line-height: 60rpx;
+}
