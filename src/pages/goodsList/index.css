@@ -1,7 +1,10 @@
 .searchbox {
+  position: fixed;
   background-color: #eeeeee;
   padding: 20rpx;
-  position: relative;
+  width: 95%;
+  top: 0;
+  left: 0;
 }
 .searchbox .search {
   background-color: #fff;
@@ -17,5 +20,59 @@
   transform: translateY(-50%);
 }
 .searchbox .searchWord icon {
+  font-size: 14px;
+}
+.goodsList {
+  margin-top: 200rpx;
+  width: 100%;
+}
+.goodsList .topbar {
+  background-color: #fff;
+  position: fixed;
+  top: 100rpx;
+  left: 0;
+  width: 100%;
+  display: flex;
+  height: 100rpx;
+  font-size: 14px;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1rpx solid #ccc;
+  font-family: "Helvetica";
+}
+.goodsList .topbar .active {
+  color: #eb4450;
+}
+.goodsList .bottomList .goodsItem {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  display: flex;
+}
+.goodsList .bottomList .goodsItem .goodsImg img {
+  width: 200rpx;
+  height: 200rpx;
+}
+.goodsList .bottomList .goodsItem .goodsState {
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.goodsList .bottomList .goodsItem .goodsState .introduce {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 12px;
+}
+.goodsList .bottomList .goodsItem .goodsState .goodsPrice {
+  color: #eb4450;
+}
+.goodsList .bottomList .goodsItem .goodsState .goodsPrice .priceB {
+  font-size: 30px;
+}
+.goodsList .bottomFont {
+  text-align: center;
   font-size: 14px;
 }

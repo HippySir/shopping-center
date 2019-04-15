@@ -14,4 +14,8 @@ function myrequert(url,method="GET",data={},header={}){
         })
     })
 }
+// 在他的基础之上再来封装一个get方法
+myrequert.get = function(url,data={}){
+    return myrequert(url,"GET",data,{});
+}
 export default myrequert;

@@ -21,11 +21,11 @@
               <span>/</span>
             </div>
             <div class="bottombox">
-              <div class="itemlist" v-for="(itema,indexa) in item.children" :key="indexa">
+              <a :href= "'/pages/goodsList/main?query='+itema.cat_name" class="itemlist" v-for="(itema,indexa) in item.children" :key="indexa">
                 <img :src="'https://itjustfun.cn/'+itema.cat_icon" alt>
                 <span>{{itema.cat_name}}</span>
-              </div>
-             
+              </a>
+            
             </div>
           </div>
         </div>
