@@ -1,5 +1,4 @@
 .searchbox {
-  position: fixed;
   background-color: #eeeeee;
   padding: 20rpx;
   width: 95%;
@@ -23,12 +22,10 @@
   font-size: 14px;
 }
 .goodsList {
-  margin-top: 200rpx;
   width: 100%;
 }
 .goodsList .topbar {
   background-color: #fff;
-  position: fixed;
   top: 100rpx;
   left: 0;
   width: 100%;
