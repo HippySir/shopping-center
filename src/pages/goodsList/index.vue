@@ -13,7 +13,7 @@
       <div class="prices" :class="{active: isExist==3}" @click="isExist=3">综合</div>
     </div>
     <div class="bottomList">
-      <div class="goodsItem" v-for="(item,index) in goodsList" :key="index">
+      <a class="goodsItem" v-for="(item,index) in goodsList" :key="index" :href="'/pages/gooddetail/main?id='+item.goods_id">
         <div class="goodsImg">
           <img :src="item.goods_small_logo" alt>
         </div>
@@ -25,7 +25,7 @@
             <span class="priceC">.00</span>
           </div>
         </div>
-      </div>
+      </a>
     </div>
     <div class="bottomFont" v-if="!isGo">---到底了兄弟，没有了!---</div>
   </div>

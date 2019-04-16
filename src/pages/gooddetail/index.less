@@ -1,0 +1,155 @@
+.homebox {
+    background-color:#f4f4f4;
+    margin-bottom: 100rpx;
+    // 轮播图的样式
+    .swipers {
+        height: 720rpx;
+        image {
+            width: 100%;
+            height: 720rpx;;
+        }
+    }
+    // 中可见信息盒子
+   .infoBox {
+       margin-bottom: 20rpx;
+       background-color: #ffffff;
+    //    height: 300rpx;
+       padding: 0 20rpx;
+       .infoTitle {
+            height: 120rpx;
+            line-height: 120rpx;
+            font-size: 20px;
+            color: #eb4450;
+       }
+       .infoBottom {
+           display: flex;
+            .infoDiscrible {
+                width: 594rpx;
+                padding-right: 78rpx;
+                box-sizing: border-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                 border-right: 1px solid #ccc;
+            }
+            .infoShare {
+                position: relative;
+                color:#ccc;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                button {
+                    width: 30rpx;
+                    height: 30rpx;
+                    position: absolute;
+                    top: 56rpx;
+                    left: 30rpx;
+                    opacity: 0;
+                }
+            }
+       }
+       .expressageBox {
+           height: 90rpx;
+           line-height: 90rpx;
+           font-size: 16px;
+           color:#ccc;
+           font-family: "黑体";
+            .expressage {
+
+            }
+            .expressagecontent {
+
+            }
+       }
+   }
+//    图片的展示
+   .intoImage {
+       background-color: #fff;
+        .detailWord {
+            display: flex;
+            height: 60rpx;
+            justify-content: center;
+            align-items: center;
+            // line-height: 50rpx;
+            // text-align: center;
+            font-size: 14px;
+            &::before {
+                content: "";
+                display: block;
+                height: 2rpx;
+                background: #ccc;
+                width: 120rpx;
+
+            }
+            &::after {
+                content: "";
+                display: block;
+                height: 2rpx;
+                background: #ccc;
+                width: 120rpx;
+
+            }
+            span {
+                margin: 0 15rpx;
+            }
+        }
+   }
+//    底部导航栏
+   .bottomNavBar {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 100rpx;
+    display: flex;
+    text-align: center;
+        .customerservice {
+            position: relative;
+            background-color: #fff;
+            flex: 2;
+            font-size: 12px;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-around;
+            color: #ccc;
+            button {
+                position: absolute;
+                top: 66rpx;
+                left: 48rpx;
+                width: 66rpx;
+                height: 20rpx;
+                background-color: #eb4450;
+                opacity: 0;
+            }
+        }
+        .cart {
+            background-color: #fff;
+            flex: 2;
+            font-size: 12px;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-around;
+            color: #ccc;
+        }
+        .addCart {
+            flex: 3;
+            font-size: 14px;
+            line-height: 100rpx;
+            background-color: #f4b73f;
+            color: #fff;
+        }
+        .atonceVuy {
+           flex: 3;
+           font-size: 14px;
+           line-height: 100rpx;
+           background-color: #eb4450;
+           color: #fff;
+
+        }
+   }
+
+}

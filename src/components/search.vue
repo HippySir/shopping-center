@@ -1,12 +1,12 @@
 <template>
       <!--头部搜索栏 -->
-    <div class="searchbox">
+    <a class="searchbox" href="/pages/search/main">
       <input type="text" class="search">
       <div class="searchWord">
         <icon type="search" size="20" color="#c9c9c9"/>
         <div class="word">搜索</div>
       </div>
-    </div>
+    </a>
 </template>
 <script>
 export default {

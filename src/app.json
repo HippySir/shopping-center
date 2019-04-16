@@ -1,10 +1,12 @@
 {
   "pages": [
-    "pages/category/main",
     "pages/home/main",
+    "pages/category/main",
     "pages/cart/main",
     "pages/my/main",
-    "pages/goodsList/main"
+    "pages/goodsList/main",
+    "pages/gooddetail/main",
+    "pages/search/main"
    ],
   "window": {
     "backgroundTextStyle": "light",

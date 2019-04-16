@@ -1,0 +1,138 @@
+.homebox {
+  background-color: #f4f4f4;
+  margin-bottom: 100rpx;
+}
+.homebox .swipers {
+  height: 720rpx;
+}
+.homebox .swipers image {
+  width: 100%;
+  height: 720rpx;
+}
+.homebox .infoBox {
+  margin-bottom: 20rpx;
+  background-color: #ffffff;
+  padding: 0 20rpx;
+}
+.homebox .infoBox .infoTitle {
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 20px;
+  color: #eb4450;
+}
+.homebox .infoBox .infoBottom {
+  display: flex;
+}
+.homebox .infoBox .infoBottom .infoDiscrible {
+  width: 594rpx;
+  padding-right: 78rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  border-right: 1px solid #ccc;
+}
+.homebox .infoBox .infoBottom .infoShare {
+  position: relative;
+  color: #ccc;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.homebox .infoBox .infoBottom .infoShare button {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 56rpx;
+  left: 30rpx;
+  opacity: 0;
+}
+.homebox .infoBox .expressageBox {
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 16px;
+  color: #ccc;
+  font-family: "黑体";
+}
+.homebox .intoImage {
+  background-color: #fff;
+}
+.homebox .intoImage .detailWord {
+  display: flex;
+  height: 60rpx;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.homebox .intoImage .detailWord::before {
+  content: "";
+  display: block;
+  height: 2rpx;
+  background: #ccc;
+  width: 120rpx;
+}
+.homebox .intoImage .detailWord::after {
+  content: "";
+  display: block;
+  height: 2rpx;
+  background: #ccc;
+  width: 120rpx;
+}
+.homebox .intoImage .detailWord span {
+  margin: 0 15rpx;
+}
+.homebox .bottomNavBar {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 100rpx;
+  display: flex;
+  text-align: center;
+}
+.homebox .bottomNavBar .customerservice {
+  position: relative;
+  background-color: #fff;
+  flex: 2;
+  font-size: 12px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  color: #ccc;
+}
+.homebox .bottomNavBar .customerservice button {
+  position: absolute;
+  top: 66rpx;
+  left: 48rpx;
+  width: 66rpx;
+  height: 20rpx;
+  background-color: #eb4450;
+  opacity: 0;
+}
+.homebox .bottomNavBar .cart {
+  background-color: #fff;
+  flex: 2;
+  font-size: 12px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  color: #ccc;
+}
+.homebox .bottomNavBar .addCart {
+  flex: 3;
+  font-size: 14px;
+  line-height: 100rpx;
+  background-color: #f4b73f;
+  color: #fff;
+}
+.homebox .bottomNavBar .atonceVuy {
+  flex: 3;
+  font-size: 14px;
+  line-height: 100rpx;
+  background-color: #eb4450;
+  color: #fff;
+}
