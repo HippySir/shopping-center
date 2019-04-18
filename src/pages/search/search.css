@@ -1,0 +1,60 @@
+.searchBox .searchLitterBox {
+  position: relative;
+  display: flex;
+  padding: 20rpx 16rpx;
+  background-color: #eeeeee;
+}
+.searchBox .searchLitterBox .import {
+  flex: 1;
+  height: 60rpx;
+  background-color: #fff;
+  padding-left: 70rpx;
+}
+.searchBox .searchLitterBox .searchtitle {
+  position: absolute;
+  top: 32rpx;
+  left: 32rpx;
+}
+.searchBox .searchLitterBox .ccancel {
+  margin-left: 10rpx;
+  line-height: 60rpx;
+  text-align: center;
+  width: 160rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+}
+.searchBox .searchLitterBox .hiddenbox {
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+}
+.searchBox .searchLitterBox .hiddenbox .hiddenItem {
+  padding-right: 60rpx;
+  padding-left: 70rpx;
+  margin-top: 10rpx;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.searchBox .searchHistory {
+  padding: 0 16rpx;
+}
+.searchBox .searchHistory .historyTitle {
+  display: flex;
+  height: 80rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchBox .searchList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.searchBox .searchList .list {
+  margin-right: 16rpx;
+  margin-top: 16rpx;
+  padding: 16rpx 20rpx;
+  background-color: #eeeeee;
+}

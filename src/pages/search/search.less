@@ -1,0 +1,63 @@
+.searchBox {
+    .searchLitterBox {
+        position: relative;
+        display: flex;
+        padding: 20rpx 16rpx;
+        background-color: #eeeeee;
+        .import {
+            flex: 1;
+            height: 60rpx;
+            background-color: #fff;
+            padding-left: 70rpx;
+        }
+        .searchtitle {
+            position: absolute;
+            top: 32rpx;
+            left: 32rpx;
+        }
+        .ccancel {
+            margin-left: 10rpx;
+            line-height: 60rpx;
+            text-align: center;
+            width: 160rpx;
+            height: 60rpx;
+            border-radius: 10rpx;
+        }
+        .hiddenbox {
+            position: absolute;
+            top: 80rpx;
+            left: 0;
+            background-color: #fff;
+            width: 100%;
+            .hiddenItem {
+                padding-right: 60rpx;
+               padding-left: 70rpx;
+               margin-top: 10rpx;
+               font-size: 12px;
+               white-space:nowrap;
+               overflow:hidden;
+               text-overflow:ellipsis;
+
+            }
+        }
+    }
+    .searchHistory {
+        padding: 0 16rpx;
+        .historyTitle {
+           display: flex;
+           height: 80rpx; 
+           justify-content: space-between;
+           align-items: center;
+        }
+    }
+    .searchList {
+        display: flex;
+        flex-wrap: wrap;
+        .list {
+            margin-right: 16rpx;
+            margin-top: 16rpx;
+            padding: 16rpx 20rpx;
+            background-color: #eeeeee;
+        }
+    }
+}
